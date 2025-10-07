@@ -1,14 +1,12 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
+    { "src": "package.json", "use": "@vercel/static-build" }
   ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ]
+,
   "env": {
     "REACT_APP_API_URL": "https://disasterreports-backend.onrender.com/api"
   },
